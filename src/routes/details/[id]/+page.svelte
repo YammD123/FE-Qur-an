@@ -39,18 +39,17 @@
 		}
 	}
 </script>
-
-<main class="px-16 pt-8">
+<main class="px-4 sm:px-16 pt-8">
 	<div class="border rounded-sm border-solid border-slate-400">
-		<Card.Root class="p-4 shadow-lg">
-			<h1 class="text-2xl font-semibold">{data.surats.data.namaLatin} - {data.surats.data.nama}</h1>
-			<div class="flex items-center justify-between">
-				<div class="flex flex-row gap-5">
-					<h1 class="flex gap-2 text-balance">
+		<Card.Root class="p-4 shadow-lg w-full">
+			<h1 class="text-2xl sm:text-xl font-semibold">{data.surats.data.namaLatin} - {data.surats.data.nama}</h1>
+			<div class="flex flex-wrap items-center justify-between gap-4">
+				<div class="flex flex-wrap gap-5">
+					<h1 class="flex gap-2 text-balance text-sm sm:text-base">
 						<List size={20} class="mt-1" /> jumlah ayat:
 						<span class="font-semibold">{data.surats.data.jumlahAyat}</span>
 					</h1>
-					<p class="flex gap-2 text-balance italic">
+					<p class="flex gap-2 text-balance italic text-sm sm:text-base">
 						<MapPin /> tempat turun:
 						<span class="font-semibold">{data.surats.data.tempatTurun}</span>
 					</p>
@@ -68,13 +67,13 @@
 		</Card.Root>
 	</div>
 
-	<div class="grid grid-cols-1 gap-8 mt-20">
+	<div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-20">
 		{#each data.surats.data.ayat as surat, index}
 		<div class="w-full">
 			<div class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-md border">
 				<div class="flex justify-between items-center mb-2">
 					<span class="text-gray-600 dark:text-gray-400 text-sm">{surat.nomorAyat}</span>
-					<p class="arab text-right text-2xl font-bold text-gray-800 dark:text-white">{surat.teksArab}</p>
+					<p class="arab text-right text-2xl sm:text-xl font-bold text-gray-800 dark:text-white">{surat.teksArab}</p>
 				</div>
 				<p class="text-gray-500 dark:text-gray-300 text-sm italic">{@html surat.teksLatin}</p>
 				<p class="mt-2 text-gray-700 dark:text-gray-200">{surat.teksIndonesia}</p>
