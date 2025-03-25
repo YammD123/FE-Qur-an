@@ -5,8 +5,9 @@
 	import * as Card from '$lib/components/ui/card/index.js';
 	import { onMount } from 'svelte';
 	export let data;
-	import { Pause, Play, List, MapPin } from '@lucide/svelte';
+	import { Pause, Play, List, MapPin, ArrowLeft } from '@lucide/svelte';
 	import { Button } from "$lib/components/ui/button/index.js";
+	import { goto } from '$app/navigation';
 
 	let isPlaying = false;
 	let audioRef: HTMLAudioElement;
@@ -38,8 +39,15 @@
 			playingIndex = null;
 		}
 	}
+
+    function goBack(){
+        goto('/')
+    }
 </script>
 <main class="px-4 sm:px-16 pt-8">
+    <Button variant="ghost" class="flex items-center gap-2 mb-4" onclick={goBack}>
+        <ArrowLeft size={20} /> Kembali
+    </Button>
 	<div class="border rounded-sm border-solid border-slate-400">
 		<Card.Root class="p-4 shadow-lg w-full">
 			<h1 class="text-2xl sm:text-xl font-semibold">{data.surats.data.namaLatin} - {data.surats.data.nama}</h1>
