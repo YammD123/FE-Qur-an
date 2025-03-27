@@ -26,7 +26,7 @@
     <Input
       type="text"
       bind:value={searchSuratQ}
-      placeholder="Ayo mengaji.............Bersama YammD"
+      placeholder="Cari Surat............."
       class="mt-7 w-1/2 border-2 border-solid outline-none focus:border-none focus:ring-0 focus:ring-offset-0 focus-visible:ring-0"
     />
     <Search  size="30" class="mt-8 text-black/65"/>
