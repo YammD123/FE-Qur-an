@@ -75,7 +75,7 @@
 		</Card.Root>
 	</div>
 
-	<div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-20">
+	<div class="grid grid-cols-1 sm:grid-cols-1 gap-8 mt-20">
 		{#each data.surats.data.ayat as surat, index}
 		<div class="w-full">
 			<div class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-md border">
